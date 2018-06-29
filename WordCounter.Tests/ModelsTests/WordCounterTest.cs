@@ -51,5 +51,20 @@ namespace WordCounter.Tests
       //Assert
       CollectionAssert.AreEqual(outputArray, result);
     }
+    [TestMethod]
+    public void WordCount_True()
+    {
+      //Arrange
+      string userInput = "the";
+      string[] toCompareArray = {"the", "last", "theme", "for", "the", "wednesday", "talk", "was", "pokemon"};
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+
+      //Act
+      newRepeatCounter.SetUserInput(userInput);
+      int result = newRepeatCounter.WordCount(toCompareArray);
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }

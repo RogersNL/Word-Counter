@@ -38,25 +38,36 @@ namespace WordCounter
     {
       return _userCompareString.Split(' ');
     }
-    public static string[] TidyArray(string[] CompareArray)
+    public static string[] TidyArray(string[] compareArray)
     {
-      for (int i = 0; i < CompareArray.Length; i ++)
+      for (int i = 0; i < compareArray.Length; i ++)
       {
-        if(CompareArray[i].All(Char.IsLetter) == false)
+        if(compareArray[i].All(Char.IsLetter) == false)
         {
           string letterOnly = "";
-          for (int j = 0; j < CompareArray[i].Length; j ++)
+          for (int j = 0; j < compareArray[i].Length; j ++)
           {
-            if(Char.IsLetter(CompareArray[i][j]))
+            if(Char.IsLetter(compareArray[i][j]))
             {
-              letterOnly = letterOnly + CompareArray[i][j];
+              letterOnly = letterOnly + compareArray[i][j];
             }
           }
-          CompareArray[i] = letterOnly;
+          compareArray[i] = letterOnly;
         }
-      CompareArray[i] = CompareArray[i].ToLower();
+      compareArray[i] = compareArray[i].ToLower();
       }
-      return CompareArray;
+      return compareArray;
+    }
+    public int WordCount(string[] toCompare)
+    {
+      foreach (string word in toCompare)
+      {
+        if(_userInput.ToLower() == word)
+        {
+          _counter++;
+        }
+      }
+      return _counter;
     }
   }
 }
