@@ -18,7 +18,7 @@ namespace WordCounter
     }
     public string GetUserInput()
     {
-      // return _userInput;
+      return _userInput;
     }
   }
 }
