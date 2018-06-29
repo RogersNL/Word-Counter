@@ -6,12 +6,8 @@ using System.Collections.Generic;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class RepeatCounterTest : IDisposable
+  public class RepeatCounterTest
   {
-    public void Dispose()
-    {
-      RepeatCounter.ClearAll();
-    }
     [TestMethod]
     public void SetUserInput_GetUserInput_True()
     {
@@ -32,7 +28,7 @@ namespace WordCounter.Tests
     {
       //Arrange
       string input = "The last theme for the Wednesday talk was Pokemon.";
-      string[] inputArray = {"The", "last", "theme", "for", "the", "Wednesday", "talk", "was", "Pokemon."}
+      string[] inputArray = {"The", "last", "theme", "for", "the", "Wednesday", "talk", "was", "Pokemon."};
       RepeatCounter newRepeatCounter = new RepeatCounter();
 
       //Act

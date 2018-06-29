@@ -10,11 +10,7 @@ namespace WordCounter
     private string _userInput;
     private string _userCompareString;
 
-    public static void ClearAll()
-    {
-      _userInput.Clear();
-      _userCompareString.Clear();
-    }
+
     public int GetCounter()
     {
       return _counter;
@@ -40,7 +36,7 @@ namespace WordCounter
     }
     public string[] CompareStringToArray ()
     {
-    //  return _userCompareString.Split(' ');
+      return _userCompareString.Split(' ');
     }
   }
 }
