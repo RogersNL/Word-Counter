@@ -39,14 +39,14 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(inputArray, result);
     }
     [TestMethod]
-    public void TidyAndSort_True()
+    public void TidyArray_True()
     {
       //Arrange
       string[] inputArray = {"The", "last", "theme", "for", "the", "Wednesday", "talk", "was", "Pokemon."};
-      string[] outputArray = {"for", "last", "pokemon", "talk", "the", "the", "theme",  "was", "wednesday"};
+      string[] outputArray = {"the", "last", "theme", "for", "the", "wednesday", "talk", "was", "pokemon"};
 
       //Act
-      string[] result = RepeatCounter.TidyAndSort(inputArray);
+      string[] result = RepeatCounter.TidyArray(inputArray);
 
       //Assert
       CollectionAssert.AreEqual(outputArray, result);

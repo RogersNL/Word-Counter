@@ -38,23 +38,25 @@ namespace WordCounter
     {
       return _userCompareString.Split(' ');
     }
-    public static string[] TidyAndSort(string[] CompareArray)
+    public static string[] TidyArray(string[] CompareArray)
     {
-      foreach(string word in CompareArray)
+      for (int i = 0; i < CompareArray.Length; i ++)
       {
-        if(word.All(Char.IsLetter) == false)
+        if(CompareArray[i].All(Char.IsLetter) == false)
         {
-          foreach(char letter in word)
+          string letterOnly = "";
+          for (int j = 0; j < CompareArray[i].Length; j ++)
           {
-            if(Char.IsLetter(letter))
+            if(Char.IsLetter(CompareArray[i][j]))
             {
-              word = word + letter;
+              letterOnly = letterOnly + CompareArray[i][j];
             }
           }
+          CompareArray[i] = letterOnly;
         }
-        word = word.ToLower();
+      CompareArray[i] = CompareArray[i].ToLower();
       }
-      return Array.Sort(CompareArray);
+      return CompareArray;
     }
   }
 }
