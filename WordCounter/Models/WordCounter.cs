@@ -3,12 +3,22 @@ using System.Collections.Generic;
 
 namespace WordCounter
 {
-public class WordCounter
+  public class RepeatCounter
   {
-  public bool ExampleTest(int year)
+    private static int _counter = 0;
+    private string _userInput;
+
+    public int GetCounter()
     {
-      // logic will go here
-      return false;
+      return _counter;
+    }
+    public void SetUserInput(string userInput)
+    {
+      _userInput = userInput;
+    }
+    public string GetUserInput()
+    {
+      // return _userInput;
     }
   }
 }

@@ -6,12 +6,21 @@ using System.Collections.Generic;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class WordCounterTest
+  public class RepeatCounterTest
   {
     [TestMethod]
-    public void ExampleTest_True()
+    public void SetUserInput_GetUserInput_True()
     {
-      // eventually your testing code will go here
+      //Arrange
+      string input = "the";
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      
+      //Act
+      newRepeatCounter.SetUserInput(input);
+      string result = newRepeatCounter.GetUserInput();
+
+      //Assert
+      Assert.AreEqual(input, result);
     }
   }
 }
