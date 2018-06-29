@@ -64,7 +64,7 @@ namespace WordCounter.Tests
       int result = newRepeatCounter.WordCount(toCompareArray);
 
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(2, result);
     }
   }
 }
