@@ -14,7 +14,7 @@ namespace WordCounter.Tests
       //Arrange
       string input = "the";
       RepeatCounter newRepeatCounter = new RepeatCounter();
-      
+
       //Act
       newRepeatCounter.SetUserInput(input);
       string result = newRepeatCounter.GetUserInput();

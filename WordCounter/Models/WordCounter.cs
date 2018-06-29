@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WordCounter
 {
@@ -14,7 +15,10 @@ namespace WordCounter
     }
     public void SetUserInput(string userInput)
     {
-      _userInput = userInput;
+      if(userInput.All(Char.IsLetter))
+      {
+        _userInput = userInput;
+      }
     }
     public string GetUserInput()
     {
