@@ -38,5 +38,18 @@ namespace WordCounter.Tests
       //Assert
       CollectionAssert.AreEqual(inputArray, result);
     }
+    [TestMethod]
+    public void TidyAndSort_True()
+    {
+      //Arrange
+      string[] inputArray = {"The", "last", "theme", "for", "the", "Wednesday", "talk", "was", "Pokemon."};
+      string[] outputArray = {"for", "last", "pokemon", "talk", "the", "the", "theme",  "was", "wednesday"};
+
+      //Act
+      string[] result = RepeatCounter.TidyAndSort(inputArray);
+
+      //Assert
+      CollectionAssert.AreEqual(outputArray, result);
+    }
   }
 }

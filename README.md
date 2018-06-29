@@ -21,7 +21,7 @@ _2. Program will accept a user inputted list of words as one input that will be 
 _3. Program will remove punctuation, force to lower case, and sort the array._
   _Example input: {"The", "last", "theme", "for", "the", "Wednesday", "talk", "was", "Pokemon."}_
   _Example output: {"for", "last", "pokemon", "talk", "the", "the", "theme",  "was", "wednesday"}_
-  _Example reasoning: Example shows removing puctuation, forcing to lower case, and sorting._
+  _Example reasoning: Example shows removing punctuation, forcing to lower case, and sorting._
 
 _4. Program will check each word in the array with the first word inputted. Partial matches not counted._
   _Example input: compare "the" with {"for", "last", "pokemon", "talk", "the", "the", "theme",  "was", "wednesday"}_

@@ -34,9 +34,27 @@ namespace WordCounter
     {
       return _userCompareString;
     }
-    public string[] CompareStringToArray ()
+    public string[] CompareStringToArray()
     {
       return _userCompareString.Split(' ');
+    }
+    public static string[] TidyAndSort(string[] CompareArray)
+    {
+      foreach(string word in CompareArray)
+      {
+        if(word.All(Char.IsLetter) == false)
+        {
+          foreach(char letter in word)
+          {
+            if(Char.IsLetter(letter))
+            {
+              word = word + letter;
+            }
+          }
+        }
+        word = word.ToLower();
+      }
+      return Array.Sort(CompareArray);
     }
   }
 }
