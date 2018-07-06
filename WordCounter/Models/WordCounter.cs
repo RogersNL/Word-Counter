@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WordCounter
+
+namespace WordCounter.Models
 {
   public class RepeatCounter
   {
@@ -10,7 +11,11 @@ namespace WordCounter
     private string _userInput;
     private string _userCompareString;
 
-
+    //Getters and Setters
+    public void SetCounter(int counter)
+    {
+      _counter = counter;
+    }
     public int GetCounter()
     {
       return _counter;
@@ -34,6 +39,8 @@ namespace WordCounter
     {
       return _userCompareString;
     }
+
+    //Methods for Repeat Counter
     public string[] CompareStringToArray()
     {
       return _userCompareString.Split(' ');
